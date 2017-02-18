@@ -2,9 +2,15 @@ var attractors = [];
 var particles = [];
 var canvas;
 
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+
 function setup() {
 	canvas = createCanvas(windowWidth, windowHeight);
-
+	canvas.position(0,0);
+	canvas.style('z-index', '-1')
 	for(var i = 0; i < 50; i++){
 			particles.push(new Particle(random(width), random(height)));
 	}
@@ -28,7 +34,3 @@ for(var i = 0; i < particles.length; i++){
 		particle.update();
 	}
 }
-
-window.onresize = function() {
-  canvas.resizeCanvas(windowWidth, windowHeight);
-};
