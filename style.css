@@ -8,6 +8,9 @@
 
 .post-dates {
   width: 10em
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  padding-right: 20px;
 
 }
 .posts a{
@@ -35,8 +38,7 @@
 
 /*Website Body*/
   body{
-    background-color:#202020;
-    font-family: "Lato", sans-serif;
+  background-color: #202020;
   }
 
   .post p{
@@ -52,10 +54,19 @@
     height: auto;
     white-space: pre-wrap;
   }
+  hr {
+    width:200%;
+  }
 
   a{
     color:skyblue;
     text-decoration: none;
+  }
+  .posts a {
+    font-family: "muli", sans-serif;
+    font-weight: 300;
+    }
+
   }
 /* Animations */
   @keyframes appear {
