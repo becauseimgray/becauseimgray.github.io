@@ -38,7 +38,14 @@
 
 /*Website Body*/
   body{
-  background-color: #202020;
+    background-color: #202020;
+  }
+  body #background{
+    background-position: absolute;
+    background: no-repeat;
+    background-color: #202020;
+    background-size: cover;
+    opacity: 0.2;
   }
 
   .post p{
@@ -80,26 +87,26 @@
 
 
 /*Navigation*/
-  ul {
+  .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
   }
-  ul li{
+  .navbar ul li{
     float: right;
     font-family: "Lato", sans-serif;
     animation-name: appear;
     animation-timing-function: linear;
     animation-duration: .5s;
   }
-  ul li a{
+  .navbar ul li a{
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-  ul li a:hover:not(.active) {
+  .navbar ul li a:hover:not(.active) {
     color: #000;
     border-radius: 0px;
   }
@@ -149,7 +156,6 @@
     color:white;
   }
 
-
 /*Repositories on the main page*/
   .repos {
     margin-top: 100px;
@@ -159,12 +165,12 @@
     font-family: "Lato", sans-serif;
     border-radius: 4px;
     //background-color: #202020;
-    overflow: hidden;
     float: right;
     font-size: 160%;
   }
 
   .repo-item a{
+    list-style: none;
     display: inline-block;
     line-height: 16px;
     padding: 14px;
@@ -172,11 +178,20 @@
     font-weight: 300;
   }
 
+
   .repo-item {
     display: block;
     padding: 4px;
     text-align: center;
   }
+@keyframes text-scale{
+  0%{
+    font-size: 100%;
+  }
+  100%{
+    font-size: 80%;
+  }
+}
 
   .repos img {
     max-width: 25%;
@@ -198,8 +213,6 @@
     margin: auto;
     margin-bottom: 10px;
   }
-
-
 
   .information{
     line-height:30px;
