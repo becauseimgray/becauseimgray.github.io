@@ -40,12 +40,48 @@
   body{
     background-color: #202020;
   }
-  body #background{
-    background-position: absolute;
-    background: no-repeat;
-    background-color: #202020;
-    background-size: cover;
-    opacity: 0.2;
+  @keyframes bg-zoom{
+    0%{transform: scale(1.0);}
+    100%{transform: scale(2.0);}
+  }
+
+#invadersimg{
+  animation-name: bg-zoom;
+  animation-duration: 100s;
+  animation-direction: alternate;
+}
+#blockbreakerimg {
+  animation-name: bg-zoom;
+  animation-duration: 100s;
+  animation-direction: alternate;
+}
+#pongimg {
+  animation-name: bg-zoom;
+  animation-duration: 100s;
+  animation-direction: alternate;
+}
+
+  #invadersimg{
+    position:fixed;
+    opacity: 0.0;
+    width:100%;
+    height:100%;
+    z-index: -999;
+
+  }
+  #blockbreakerimg{
+    position:fixed;
+    opacity: 0.0;
+    width:100%;
+    height:100%;
+    z-index: -999;
+  }
+  #pongimg{
+    position:fixed;
+    opacity: 0.0;
+    width:100%;
+    height:100%;
+    z-index: -999;
   }
 
   .post p{
@@ -172,10 +208,22 @@
   .repo-item a{
     list-style: none;
     display: inline-block;
-    line-height: 16px;
+    line-height: 25px;
     padding: 14px;
     font-family: "Lato", sans-serif;
     font-weight: 300;
+  }
+  @keyframes repo-transform{
+    0%{transform: scale(1.0);}
+    100%{transform: scale(1.2);}
+  }
+  .repo-item a:hover{
+    color:white;
+    animation-name: repo-transform;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
   }
 
 
