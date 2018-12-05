@@ -1,6 +1,5 @@
 
 var canvas;
-var img;
 var bg;
 var x = 0;
 var y = 0;
@@ -11,7 +10,6 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   bg = loadImage("bg.jpg");
-  //img = loadImage("remilove.png");
   noStroke();
 }
 
@@ -29,5 +27,4 @@ function draw() {
 
   fill(255);
   stroke(255);
-  //image(img,x, y);
 }
