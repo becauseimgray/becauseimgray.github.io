@@ -1,67 +1,33 @@
-(function(window, document, undefined){
-  // fade out
-function fadeOut(el){
-  el.style.opacity = 0.2;
 
-  (function fade() {
-    if ((el.style.opacity -= .03) < 0) { //.1
-      el.style.display = "none";
-    } else {
-      requestAnimationFrame(fade);
-    }
-  })();
+var canvas;
+var img;
+var bg;
+var x = 0;
+var y = 0;
+
+
+//main setup of canvas
+function setup() {
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0,0);
+  bg = loadImage("bg.jpg");
+  img = loadImage("remilove.png");
+  noStroke();
 }
 
-// fade in
-function fadeIn(el, display){
-  el.style.opacity = 0;
-  el.style.display = display || "block";
-
-  (function fade() {
-    var val = parseFloat(el.style.opacity);
-    if (!((val += .01) > 0.2)) { //0.1
-      el.style.opacity = val;
-      requestAnimationFrame(fade);
-    }
-  })();
+//resizes the canvas on window resize
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
+//main draw function
+function draw() {
+  	background(bg);	
+  //background(63,68,68);
+  x = lerp(x, mouseX, 0.05);
+  y = lerp(y, mouseY, 0.05);
 
-window.onload = init;
-
-  function init(){
-    var invaders_link = document.getElementById('invaders');
-    var block_link = document.getElementById('blockbreaker');
-    var pong_link = document.getElementById('pong');
-
-
-    var invadersimg = document.getElementById('invadersimg');
-    var blockbreakerimg = document.getElementById('blockbreakerimg');
-    var pongimg = document.getElementById('pongimg');
-
-    var body = document.body;
-    //var background = document.getElementById('background');
-
-    var invaders_image = "url('images/invaders_screenie.png')";
-    var breaker_image = "url('images/blockbreaker_screenie.png')";
-    var pong_image = "url('images/pongl2d_screenie.png')";
-
-    invaders_link.onmouseenter = function()    {fadeIn(invadersimg);};
-    block_link.onmouseenter    = function()    {fadeIn(blockbreakerimg);};
-    pong_link.onmouseenter     = function()    {fadeIn(pongimg);};
-
-
-    invaders_link.onmouseleave = function()    {fadeOut(invadersimg);};
-    block_link.onmouseleave    = function()    {fadeOut(blockbreakerimg);};
-    pong_link.onmouseleave     = function()    {fadeOut(pongimg);};
-
-    document.getElementById('repos').onmouseleave = function() {
-      fadeOut(invadersimg);
-      fadeOut(blockbreakerimg);
-      fadeOut(pongimg);
-    }
-
-  };
-
-
-})(window, document, undefined);
+  fill(255);
+  stroke(255);
+  image(img,x, y);
+}

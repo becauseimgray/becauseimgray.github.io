@@ -1,302 +1,80 @@
-/*SmartPhone*/
-/*Responsive Design*/
+body {
+        margin: 0; 
+        overflow: hidden;
+        background-color:#3f4444;
+        
+        /* selection disable*/
+  		-webkit-touch-callout: none; /* iOS Safari */
+    	-webkit-user-select: none; /* Safari */
+     	-khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; 	  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+      }
 
-.post-parent {
-  display: flex;
-  line-height: 2.5
-}
+      canvas {
+           position:absolute;
+           top:0;
+           left:0;
+           width:100%;
+           height:100%;
+           z-index:-2;
+      }	
 
-.post-dates {
-  width: 10em
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  padding-right: 20px;
+       @font-face {
+		font-family: "Fipps-Regular";
+		src: url("Fipps-Regular.otf");
+	  } 
 
-}
-.posts a{
-  text-decoration:none;
-}
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(5);
+        height: 100vh;
+        /*disables link color changing */
+        
+        }
 
-.posts a:hover {
-  color: white;
-}
+      ul {
+      	padding: 0;
+      	margin: 0;
+      	list-style: none;
+      }
 
-@media screen and (max-width:600px) {
-  .repos {
-    display: none;
-    }
-  .post-dates {
-    display: flex;
-    position: absolute;
-    padding: 20px;
-  }
-  .post-parent {
-    display: flex;
-    padding-bottom: 1em
-  }
-}
+      li { 
+      	/*icon color*/
+      	color:#000000;
+      	display:inline-flex;
 
-/*Website Body*/
-  body{
-    background-color: #202020;
-  }
-  @keyframes bg-zoom{
-    0%{transform: scale(1.0);}
-    100%{transform: scale(2.0);}
-  }
+      }
+      
+      a:visited {
+      /*disables link color changing */
+       color:inherit;
+       text-decoration: none;
+      }
 
-#invadersimg{
-  animation-name: bg-zoom;
-  animation-duration: 100s;
-  animation-direction: alternate;
-}
-#blockbreakerimg {
-  animation-name: bg-zoom;
-  animation-duration: 100s;
-  animation-direction: alternate;
-}
-#pongimg {
-  animation-name: bg-zoom;
-  animation-duration: 100s;
-  animation-direction: alternate;
-}
+      p {
+      	position: absolute;  
+    	left: 50%;                        /* horizontal alignment */
+    	top: 60%;                         /* vertical alignment */
+    	transform: translate(-50%, -50%); /* precise centering; see link below */ 
+    	font-family: 'Fipps-Regular', Arial, sans-serif;
+    	color:#000000;
+    	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+      }
 
-  #invadersimg{
-    position:fixed;
-    opacity: 0.0;
-    width:100%;
-    height:100%;
-    z-index: -999;
-
-  }
-  #blockbreakerimg{
-    position:fixed;
-    opacity: 0.0;
-    width:100%;
-    height:100%;
-    z-index: -999;
-  }
-  #pongimg{
-    position:fixed;
-    opacity: 0.0;
-    width:100%;
-    height:100%;
-    z-index: -999;
-  }
-
-  .post p{
-    align:left;
-    text-align: left;
-    word-wrap: normal;
-    margin-left:80px;
-    margin-right:80px;
-  }
-
-  pre {
-    max-width: 100%;
-    height: auto;
-    white-space: pre-wrap;
-  }
-  hr {
-    width:200%;
-  }
-
-  a{
-    color:skyblue;
-    text-decoration: none;
-  }
-  .posts a {
-    font-family: "muli", sans-serif;
-    font-weight: 300;
-    }
-
-  }
-/* Animations */
-  @keyframes appear {
-    0% {opacity: 0.0;}
-    10% {opacity: 0.1;}
-    50% {opacity: 0.5;}
-    75% {opacity: 0.7;}
-    100% {opacity:1.0;}}
-
-  @keyframes hr_a2{ 0%{width:90px;} 100%{width:100px;}}
-
-
-/*Navigation*/
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  .navbar ul li{
-    float: right;
-    font-family: "Lato", sans-serif;
-    animation-name: appear;
-    animation-timing-function: linear;
-    animation-duration: .5s;
-  }
-  .navbar ul li a{
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .navbar ul li a:hover:not(.active) {
-    color: #000;
-    border-radius: 0px;
-  }
-
-
-  .hvr-sweep-to-bottom {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px transparent;
-    position: relative;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-  }
-  .hvr-sweep-to-bottom:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #FFF;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
-  .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
-    color: white;
-  }
-  .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-  }
-
-  .post-dates{
-    color:white;
-  }
-
-/*Repositories on the main page*/
-  .repos {
-    margin-top: 100px;
-    margin-right: 100px;
-    width: 200px;
-    text-decoration: none;
-    font-family: "Lato", sans-serif;
-    border-radius: 4px;
-    //background-color: #202020;
-    float: right;
-    font-size: 160%;
-  }
-
-  .repo-item a{
-    list-style: none;
-    display: inline-block;
-    line-height: 25px;
-    padding: 14px;
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-  }
-  @keyframes repo-transform{
-    0%{transform: scale(1.0);}
-    100%{transform: scale(1.2);}
-  }
-  .repo-item a:hover{
-    color:white;
-    animation-name: repo-transform;
-    animation-duration: .8s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-  }
-
-
-  .repo-item {
-    display: block;
-    padding: 4px;
-    text-align: center;
-  }
-@keyframes text-scale{
-  0%{
-    font-size: 100%;
-  }
-  100%{
-    font-size: 80%;
-  }
-}
-
-  .repos img {
-    max-width: 25%;
-  }
-
-  .repos-title{
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    padding: 4px;
-  }
-
-  .repos hr{
-    animation: hr_a2 1s ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-    width: 100px;
-    margin: auto;
-    margin-bottom: 10px;
-  }
-
-  .information{
-    line-height:30px;
-    margin-right:80px;
-    margin-left:80px;
-    font-family: "Lato", sans-serif;
-  }
-  .PGP{
-    color:skyblue;
-    text-align:right;
-  }
-  .header {
-    font-family: "Lato", sans-serif;
-    font-weight: lighter;
-    text-align:center;
-    font-size: 200%;
-    font-family: sans-serif;
-    color:white;
-  }
-  .protestimg img {
-    position:absolute;
-         top:0;
-         left:0;
-         z-index:-1;
-         width:100%;
-         opacity: 0.1;
-         filter: alpha(opacity=3);
-  }
-  .sources p{
-    display: block;
-    color:skyblue;
-    line-height: 18px;
-  }
-  .about p{
-    color:white;
-  }
-  .post{
-    color:white;
-  }
+      a {
+      	color:inherit;
+      	text-decoration: none;
+      }
+      .zoom:hover { 
+      	transition-duration: 300ms;
+      	transform: scale(1.1); 
+      }
+      .zoom {
+      	transition-duration: 300ms;
+      	transform:scale(1);
+      }
