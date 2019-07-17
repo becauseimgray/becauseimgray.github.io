@@ -9,7 +9,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   noStroke();
-background(216,191,216);
+//background(216,191,216);
 }
 
 //resizes the canvas on window resize
