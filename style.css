@@ -1,12 +1,15 @@
+
+
 body {
         margin: 0; 
         overflow: hidden;
         background-color:#3f4444;
+        background-image:none;
         
         /* selection disable*/
-  		-webkit-touch-callout: none; /* iOS Safari */
-    	-webkit-user-select: none; /* Safari */
-     	-khtml-user-select: none; /* Konqueror HTML */
+  		 -webkit-touch-callout: none; /* iOS Safari */
+    	 -webkit-user-select: none; /* Safari */
+     	 -khtml-user-select: none; /* Konqueror HTML */
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none; 	  /* Non-prefixed version, currently
@@ -25,7 +28,31 @@ body {
        @font-face {
 		font-family: "Fipps-Regular";
 		src: url("Fipps-Regular.otf");
-	  } 
+    } 
+      .mc-body {
+        overflow: hidden;
+        background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("mc_page/images/obs.jpg");
+        background-repeat: repeat;
+      }  
+      
+      .server-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1.5);
+        height: 30vh;
+      }
+
+      .mc-icons { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(2);
+        height: 10vh;
+        padding:10px;
+        margin:0px;
+        filter:invert(100%);
+      }
 
       .icons {
         display: flex;
@@ -47,7 +74,6 @@ body {
       	/*icon color*/
       	color:#000000;
       	display:inline-flex;
-
       }
       
       a:visited {
@@ -57,7 +83,7 @@ body {
       }
 
       p {
-      	position: absolute;  
+      position: absolute;  
     	left: 50%;                        /* horizontal alignment */
     	top: 60%;                         /* vertical alignment */
     	transform: translate(-50%, -50%); /* precise centering; see link below */ 
@@ -65,6 +91,17 @@ body {
     	color:#000000;
     	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
       }
+      
+      .mc-p{
+        position: absolute;  
+        left: 50%;                        /* horizontal alignment */
+        top: 60%;                         /* vertical alignment */
+        transform: translate(-50%, -50%); /* precise centering; see link below */ 
+        font-family: 'Fipps-Regular', Arial, sans-serif;
+        color:#000000;
+        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+        text-align:center;
+        }
 
       a {
       	color:inherit;
