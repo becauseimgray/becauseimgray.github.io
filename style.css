@@ -31,7 +31,7 @@ body {
     } 
       .mc-body {
         overflow: hidden;
-        background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("mc_page/images/obs.jpg");
+        background-image:linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,125,9,1) 50%, rgba(0,212,255,0) 100%), url("mc_page/images/obs.jpg");
         background-repeat: repeat;
       }  
       
@@ -81,15 +81,28 @@ body {
        color:inherit;
        text-decoration: none;
       }
-
-      p {
-      position: absolute;  
-    	left: 50%;                        /* horizontal alignment */
-    	top: 60%;                         /* vertical alignment */
-    	transform: translate(-50%, -50%); /* precise centering; see link below */ 
-    	font-family: 'Fipps-Regular', Arial, sans-serif;
-    	color:#000000;
-    	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+      .about {
+        position: absolute;  
+        left: 50%;                        
+        top: 60%;                         
+        transform: translate(-50%, -50%); 
+        font-family: 'Fipps-Regular', Arial, sans-serif;
+        color:#000000;
+        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+      }
+      .server-title{
+        position: absolute;
+        left: 47%;  
+        padding:0 0 20px 0;
+        margin:0 0 20px 0;
+    	  font-family: 'Fipps-Regular', Arial, sans-serif;
+    	  color:#000000;
+        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+        transform: scale(1.5);
+      }
+      .wave{
+        position: fixed;
+        z-index: 99;
       }
       
       .mc-p{
