@@ -1,172 +1,172 @@
-
-
-body {
-        margin: 0; 
-        overflow: hidden;
-        background-color:#3f4444;
-        background-image:none;
-	    position:fixed;
-	    height:100vh;
-	    width:100vw;
-        
-        /* selection disable*/
-  		 -webkit-touch-callout: none; /* iOS Safari */
-    	 -webkit-user-select: none; /* Safari */
-     	 -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; 	  /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-      }
-      canvas {
-           position:absolute;
-           top:0;
-           left:0;
-           width:100%;
-           height:100%;
-           z-index:-2;
-      }
-       @font-face {
-		font-family: "Fipps-Regular";
-		src: url("Fipps-Regular.otf");
-    } 
-      .mc-body {
-        overflow: hidden;
-        background-image:linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,125,9,1) 50%, rgba(0,212,255,0) 100%), url("mc_page/images/obs.jpg");
-        background-repeat: repeat;
-      }  
-      
-      .server-image{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: scale(1.5);
-        height: 30vh;
-      }
-
-      .mc-icons { 
-        display: flex;
-	    flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: scale(2);
-        height: 10vh;
-        padding:10px;
-        margin:0px;
-        filter:invert(100%);
-      }
-
-      .icons {
-        display: flex;
-        position:relative;
-        justify-content: center;
-        align-items:center;	
-        transform: scale(5);
-	    height:100vh;
-        /*disables link color changing */
-        }
-
-      ul {
-	    display: flex;
-      	padding: 0;
-      	margin: 0;
-      	list-style: none;
-      }
-      .zoom {
-	      display:flex;
-	      padding:.3vw;
-	      margin:0;
-	      list-style: none;
-      }
-
-      li {
-	    display:flex;
-      	/*icon color*/
-      	color:#FFFFFF;
-      	/*display:inline-flex;*/
-      }
-      
-      a:visited {
-      /*disables link color changing */
-       color:inherit;
-       text-decoration: none;
-      }
-
-      .about {
-        position:fixed;
-        top: 70%;
-        left: 50%;
-        overflow:hidden;
-        white-space:nowrap;
-        transform: translate(-50%, -50%);
-        font-family: 'Fipps-Regular', Arial, sans-serif;
-        font-size:.8vw;
-        color:#000000;
-        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-      }
-
-      .server-title{
-        position: absolute;
-        left: 47%;
-        padding:0 0 20px 0;
-        margin:0 0 20px 0;
-    	  font-family: 'Fipps-Regular', Arial, sans-serif;
-    	  color:#000000;
-        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-        transform: scale(1.5);
-      }
-      .wave{
-        position: fixed;
-        z-index: 99;
-      }
-      
-      .mc-p{
-        position: absolute;  
-        left: 50%;                        /* horizontal alignment */
-        top: 60%;                         /* vertical alignment */
-        transform: translate(-50%, -50%); /* precise centering; see link below */ 
-        font-family: 'Fipps-Regular', Arial, sans-serif;
-        color:#000000;
-        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-        text-align:center;
-        }
-
-      a {
-      	color:inherit;
-      	text-decoration: none;
-      }
-      .zoom:hover { 
-      	transition-duration: 300ms;
-      	transform: scale(1.1); 
-      }
-      .zoom {
-      	transition-duration: 300ms;
-      	transform:scale(1);
-      }
-@media (max-width: 1000px) {
-      .icons {
-	      display:flex;
-          justify-content:center;
-          align-items:center;
-          transform: scale(2);
-          height: 100vh;
-          }
-	  .zoom {
-           display:flex;
-	       padding:.3vw;
-           margin:0;
-           list-style: none;
-	  }
-      .about {
-        position:fixed;
-        top: 60%;
-        left: 50%;
-        overflow:hidden;
-        white-space:nowrap;
-        transform: translate(-50%, -50%);
-        font-size:1.5vw;
-        font-family: 'Fipps-Regular', Arial, sans-serif;
-        color:#000000;
-        text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-      }
+ body {
+     margin: 0;
+     overflow: hidden;
+     background-color:#3f4444;
+     background-image:none;
+     position:fixed;
+     height:100vh;
+     width:100vw;
+    /* selection disable*/
+     -webkit-touch-callout: none;
+    /* iOS Safari */
+     -webkit-user-select: none;
+    /* Safari */
+     -khtml-user-select: none;
+    /* Konqueror HTML */
+     -moz-user-select: none;
+    /* Firefox */
+     -ms-user-select: none;
+    /* Internet Explorer/Edge */
+     user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+ canvas {
+     position:absolute;
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;
+     z-index:-2;
+}
+ @font-face {
+     font-family: "Fipps-Regular";
+     src: url("Fipps-Regular.otf");
+}
+ .mc-body {
+     overflow: hidden;
+     background-image:linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,125,9,1) 50%, rgba(0,212,255,0) 100%), url("mc_page/images/obs.jpg");
+     background-repeat: repeat;
+}
+ .server-image{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform: scale(1.5);
+     height: 30vh;
+}
+ .mc-icons {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     transform: scale(2);
+     height: 10vh;
+     padding:10px;
+     margin:0px;
+     filter:invert(100%);
+}
+ .icons {
+     display: flex;
+     position:relative;
+     justify-content: center;
+     align-items:center;
+     transform: scale(5);
+     height:100vh;
+    /*disables link color changing */
+}
+ ul {
+     display: flex;
+     padding: 0;
+     margin: 0;
+     list-style: none;
+}
+ .zoom {
+     display:flex;
+     padding:.3vw;
+     margin:0;
+     list-style: none;
+}
+ li {
+     display:flex;
+    /*icon color*/
+     color:#FFFFFF;
+    /*display:inline-flex;
+    */
+}
+ a:visited {
+    /*disables link color changing */
+     color:inherit;
+     text-decoration: none;
+}
+ .about {
+     position:fixed;
+     top: 70%;
+     left: 50%;
+     overflow:hidden;
+     white-space:nowrap;
+     transform: translate(-50%, -50%);
+     font-family: 'Fipps-Regular', Arial, sans-serif;
+     font-size:.8vw;
+     color:#000000;
+     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+ .server-title{
+     position: absolute;
+     left: 47%;
+     padding:0 0 20px 0;
+     margin:0 0 20px 0;
+     font-family: 'Fipps-Regular', Arial, sans-serif;
+     color:#000000;
+     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+     transform: scale(1.5);
+}
+ .wave{
+     position: fixed;
+     z-index: 99;
+}
+ .mc-p{
+     position: absolute;
+     left: 50%;
+    /* horizontal alignment */
+     top: 60%;
+    /* vertical alignment */
+     transform: translate(-50%, -50%);
+    /* precise centering;
+     see link below */
+     font-family: 'Fipps-Regular', Arial, sans-serif;
+     color:#000000;
+     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+     text-align:center;
+}
+ a {
+     color:inherit;
+     text-decoration: none;
+}
+ .zoom:hover {
+     transition-duration: 300ms;
+     transform: scale(1.1);
+     opacity:1;
+}
+ .zoom {
+     transition-duration: 300ms;
+     transform:scale(1);
+     opacity: 0.6;
+}
+ @media (max-width: 1000px) {
+     .icons {
+         display:flex;
+         justify-content:center;
+         align-items:center;
+         transform: scale(2);
+         height: 100vh;
     }
+     .zoom {
+         display:flex;
+         padding:.3vw;
+         margin:0;
+         list-style: none;
+         opacity:1;
+    }
+     .about {
+         position:fixed;
+         top: 60%;
+         left: 50%;
+         overflow:hidden;
+         white-space:nowrap;
+         transform: translate(-50%, -50%);
+         font-size:1.5vw;
+         font-family: 'Fipps-Regular', Arial, sans-serif;
+         color:#000000;
+         text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    }
+}
